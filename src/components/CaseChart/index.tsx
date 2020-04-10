@@ -1,15 +1,18 @@
 import React from 'react'
 import {AreaChart, XAxis, YAxis, CartesianGrid, Tooltip, Area} from 'recharts';
 import { Box } from 'rebass';
+import {useMedia} from 'use-media';
 
 interface ICaseChart{
     data:any[];
 }
 
 const CaseChart:React.SFC<ICaseChart> = ({data,}) => {
+    const isWide = useMedia({minWidth: '700px'});
+
     return (
         <Box marginX="auto" paddingX={2}>
-            <AreaChart width={730} height={250} data={data}
+             <AreaChart width={isWide?800:420} height={480} data={data}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <defs>
                 <linearGradient id="colorConfirmed" x1="0" y1="0" x2="0" y2="1">

@@ -16,6 +16,7 @@ interface ICaseList{
 }
 
 const CaseList:React.SFC<ICaseList> = ({country,range}) => {
+
     const {loading,error,data} = useCaseListQuery({
         variables: {
             country: country,
