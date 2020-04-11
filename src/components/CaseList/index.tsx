@@ -16,10 +16,10 @@ interface ICaseList{
 }
 
 const CaseList:React.SFC<ICaseList> = ({country,range}) => {
-
+    const countryBind = (name:string) =>(({"Taiwan":"Taiwan*"} as Record<string,string>)[name]||name)
     const {loading,error,data} = useCaseListQuery({
         variables: {
-            country: country,
+            country: countryBind(country),
             dateAfter: getDate(-range)
          },
     });
