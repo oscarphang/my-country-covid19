@@ -1,3 +1,14 @@
+## Project developed in one day
+
+## Tech used
+- Reactjs
+- Typescript
+- Rebass
+- Rechart
+- Graphql
+
+Api credited to r_lindskog
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
