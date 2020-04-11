@@ -40,7 +40,7 @@ const CaseListContainer = () => {
                     </Select>
                     </Box>
                     <Box flex="1">
-                    <Select styles={customSelectStyle} value={QUERY_RANGE.find(elem=>elem.value===String(currentRange))} onChange={(item:any)=>setCurrentRange(item.value)}  options={QUERY_RANGE}></Select>
+                    <Select styles={customSelectStyle} value={QUERY_RANGE.find(elem=>elem.value===String(currentRange))} onChange={(item:any)=>setCurrentRange(Number(item.value))}  options={QUERY_RANGE}></Select>
                     </Box>
                     </Flex>
                     <CaseList country={currentCountry!==""?currentCountry:country} range={currentRange+1}></CaseList>
